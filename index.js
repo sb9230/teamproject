@@ -12,7 +12,7 @@ var Web3 = require("web3");
 var product_contract = require("./contract/contract.js");
 var mysql = require("mysql2");
 var connection = mysql.createConnection({
-//  host: "192.168.0.12",
+  //  host: "192.168.0.12",
   host: "localhost",
   port: 3306, // db 포트
   user: "block", // user 이름
@@ -241,13 +241,13 @@ app.post("/confirm", function (req, res) {
   const check5 = req.body.check5;
   const car_id = req.body.car_id;
   const check_etc = "N/A";
-  console.log("checketc = ",req.body.checketc);
+  console.log("checketc = ", req.body.checketc);
   // if (!req.body.checketc) {
   //   check_etc = "N/A";
   // } else {
   //   check_etc = req.body.checketc;
   // }
-  var check_time = moment().format('YYYYMMDDHHmmss');
+  var check_time = moment().format("YYYYMMDDHHmmss");
 
   const checks = check1 + check2 + check3 + check4 + check5;
   console.log(car_id, checks, check_etc, check_time);
@@ -653,7 +653,7 @@ app.get("/m_car_info/delete/:num", function (req, res) {
   }
 });
 server.listen(port, function () {
-  var check_time = moment().format('YYYYMMDDHHmmss');
+  var check_time = moment().format("YYYYMMDDHHmmss");
   console.log(check_time);
   console.log("웹 서버 시작", port);
 });

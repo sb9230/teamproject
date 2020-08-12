@@ -17,7 +17,7 @@ var connection = mysql.createConnection({
   port: 3306, // db 포트
   user: "block", // user 이름
   password: "block1234!@", // 비밀번호
-  database: "BUSSAFE", // database 이름
+  database: "team_project", // database 이름
 });
 
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
@@ -258,7 +258,7 @@ app.post("/confirm", function (req, res) {
     smartcontract.methods
       .AddCheckList(car_id, checks, check_etc, parseInt(check_time))
       .send({
-        from: "0x7031679C6bcA91Fe32263938f7D3b293272423b6",
+        from: "0x4E29Df6a06D9ee60a28Bfa1d39891E196eB4d36B",
         gas: 200000,
       })
       .then(function (receipt) {

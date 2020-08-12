@@ -17,7 +17,7 @@ var connection = mysql.createConnection({
   port: 3306, // db 포트
   user: "block", // user 이름
   password: "block1234!@", // 비밀번호
-  database: "BUSSAFE", // database 이름
+  database: "team_project", // database 이름
 });
 
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));

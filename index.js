@@ -12,11 +12,11 @@ var Web3 = require("web3");
 var product_contract = require("./contract/contract.js");
 var mysql = require("mysql2");
 var connection = mysql.createConnection({
-  //  host: "192.168.0.12",
-  host: "localhost",
+  host: "192.168.0.12",
+  //host: "localhost",
   port: 3306, // db 포트
   user: "block", // user 이름
-  password: "block1234", // 비밀번호
+  password: "block1234!@", // 비밀번호
   database: "team_project", // database 이름
 });
 
